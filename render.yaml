@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: estudiantes-api
+    env: docker
+    plan: free   # puedes cambiar a starter o superior si necesitas más recursos
+    autoDeploy: true
+    envVars:
+      - key: SERVER_PORT
+        value: 8080
+      - key: MONGO_URI
+        sync: false   # Render te pedirá este valor en el dashboard, se mantiene secreto

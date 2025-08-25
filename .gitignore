@@ -1,18 +1,41 @@
-HELP.md
+### Java ###
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+hs_err_pid*
+
+### Maven ###
 target/
-.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
+.mvn/wrapper/maven-wrapper.jar # <- Inclúyelo si no usas mvnw (si lo usas, bórralo de aquí)
 
-### Archivos sensibles ###
-.env
+### Gradle (por si acaso) ###
+.gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### Logs ###
 *.log
+*.out
+*.pid
 
-### Archivos de sistema ###
-.DS_Store
-Thumbs.db
+### Configuración y secretos ###
+.env
+*.key
+*.pem
 
-### STS ###
+### Docker ###
+docker-compose.override.yml
+docker-compose.*.yml
+.docker/
+**/docker-data/
+
+### IDEs ###
+# STS / Spring Tool Suite
 .apt_generated
 .classpath
 .factorypath
@@ -21,21 +44,27 @@ Thumbs.db
 .springBeans
 .sts4-cache
 
-### IntelliJ IDEA ###
-.idea
-*.iws
+# IntelliJ IDEA
+.idea/
 *.iml
+*.iws
 *.ipr
 
-### NetBeans ###
+# NetBeans
 /nbproject/private/
 /nbbuild/
 /dist/
 /nbdist/
 /.nb-gradle/
-build/
-!**/src/main/**/build/
-!**/src/test/**/build/
 
-### VS Code ###
+# VS Code
 .vscode/
+
+### Sistema ###
+.DS_Store
+Thumbs.db
+
+### Test Reports ###
+/surefire-reports/
+/jacoco-report/
+/test-output/
